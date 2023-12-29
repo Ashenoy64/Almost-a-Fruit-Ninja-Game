@@ -12,10 +12,12 @@ public class GameManager : MonoBehaviour
     private int score;
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOver;
+    public TextMeshProUGUI strike;
     private float spawnRate = 1.0f;
     public bool isGameActive = false;
     public GameObject titleScreen;
     public bool test;
+    private int strikeCount = 0;
 
     public void RestartGame()
     {
@@ -38,7 +40,18 @@ public class GameManager : MonoBehaviour
         UpdateScore(0);
         gameOver.gameObject.SetActive(false);
     }
+    
+    public void UpdateStrike()
+    {
+        if(isGameActive)
+        {
+            strikeCount += 1;
+            strike.text = strike.text + "X";
+            if(strikeCount>=3 )
+                GameOver();
 
+        }
+    }
     IEnumerator SpawnTarget()
     {
         while(isGameActive)

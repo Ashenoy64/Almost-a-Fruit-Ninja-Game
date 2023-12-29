@@ -8,7 +8,7 @@ public class Target : MonoBehaviour
 {
     private Rigidbody targetRb;
 
-    private float minSpeed = 12;
+    private float minSpeed = 13;
     private float maxSpeed = 16;
     private float maxTorque = 10;
     private float xRange = 4;
@@ -36,6 +36,10 @@ public class Target : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
+        if(gameObject.CompareTag("Good"))
+        {
+            gameManager.UpdateStrike();
+        }
         
     }
     void Start()

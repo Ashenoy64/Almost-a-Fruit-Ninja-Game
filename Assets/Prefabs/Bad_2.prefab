@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 5345492860743685513}
   - component: {fileID: 316246468850639069}
   - component: {fileID: 8964557991804803665}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bad_2
   m_TagString: Bad
   m_Icon: {fileID: 0}
@@ -127,7 +127,7 @@ Rigidbody:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
@@ -148,7 +148,7 @@ BoxCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
